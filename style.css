@@ -1,0 +1,266 @@
+body {
+    margin: 0 auto;
+    width: 700px;
+    background-color: rgb(136, 209, 246);
+}
+
+/* タブレットサイズ (画面幅768px以下) への対応 */
+@media (max-width: 768px) {
+    body {
+        width: 90%; /* 画面幅に対して90%の幅に設定 */
+    }
+    .post-form__flex {
+        flex-direction: column;
+    }
+    .post-form__flex > div:first-child {
+        width: 100%;
+    }
+    button {
+        width: 100%; /* ボタンを画面幅いっぱいにする */
+    }
+    nav.pagination ul li a {
+        padding: 8px 10px; /* ナビゲーションリンクのサイズを小さく */
+    }
+}
+
+/* スマートフォンサイズ (画面幅480px以下) への対応 */
+@media (max-width: 480px) {
+    body {
+        width: 100%; /* スマホでは幅を100%に */
+    }
+    h1 {
+        font-size: 1.5rem; /* ヘッダーの文字を小さく */
+    }
+    .post-list li {
+        padding: 10px 15px; /* 投稿リストのパディングを小さく */
+    }
+    .post-datetime {
+        font-size: 10px; /* 日付の文字をさらに小さく */
+    }
+    button {
+        padding: 8px 20px;
+        font-size: 0.9rem; /* ボタンサイズを調整 */
+    }
+    nav.pagination ul li a {
+        padding: 6px 8px; /* ナビゲーションリンクをさらに小さく */
+    }
+    textarea, input {
+        padding: 8px; /* テキストエリアやインプットのパディングを小さく */
+    }
+    .reply-form {
+        margin-left: 10px; /* レスポンスのインデントを小さく */
+        padding: 5px; /* パディングを小さく */
+    }
+}
+
+/* 全般的なデザイン調整 */
+hr {
+    margin: 40px 0;
+    border-color: rgb(199, 199, 199);
+}
+h1 {
+    text-align: center;
+}
+li {
+    list-style: none;
+}
+p {
+    margin: 0;
+}
+p,
+span {
+    color: #1e1e1e;
+}
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid rgb(175, 167, 167);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+textarea {
+    line-height: 1.5;
+}
+button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button[name="post_btn"] {
+    border: 1px solid rgb(148, 148, 218);
+    background-color: rgb(149, 149, 149);
+}
+button[name="update_btn"],
+button[name="update_submit_btn"] {
+    border: 1px solid rgb(96, 96, 233);
+    background-color: rgb(96, 96, 233);
+    padding: 5px 15px;
+}
+button[name="delete_btn"],
+button[name="delete_submit_btn"] {
+    border: 1px solid rgb(96, 96, 233);
+    background-color: rgb(96, 96, 233);
+    padding: 5px 15px;
+}
+button[name="cancel_btn"] {
+    border: 1px solid rgb(172, 172, 172);
+    background-color: rgb(182, 182, 182);
+}
+button[name="post_btn"]:hover {
+    background-color: rgb(96, 96, 233);
+}
+button[name="update_btn"]:hover,
+button[name="update_submit_btn"]:hover {
+    background-color: rgb(83, 205, 83);
+}
+button[name="delete_btn"]:hover,
+button[name="delete_submit_btn"]:hover {
+    background-color: rgb(197, 82, 82);
+}
+button[name="cancel_btn"]:hover {
+    background-color: rgb(219, 218, 218);
+}
+.btn--mg-c {
+    margin: 0 auto;
+}
+.post-list button {
+    margin: 30px 0 0 0;
+    padding: 8px 20px;
+}
+.post-list li {
+    margin-bottom: 15px;
+    padding: 20px 30px;
+    background-color: #fff;
+    border: 1px solid rgb(188, 188, 188);
+    border-radius: 10px;
+}
+.post-list span {
+    display: inline-block;
+    margin-bottom: 25px;
+}
+.post-form__flex {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    column-gap: 15px;
+    margin-bottom: 25px;
+}
+.post-form__flex>div:first-child {
+    width: 250px;
+}
+.post-form__flex>div:last-child {
+    flex: 1;
+}
+.btn-flex {
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+}
+.post-list li:last-child {
+    margin-bottom: 0;
+}
+.post-datetime {
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 12px;
+    color: gray;
+}
+.post-datetime__updated {
+    display: inline-block;
+    margin-left: 10px;
+}
+.updated-post {
+    margin-left: auto;
+    padding: 2px 5px;
+    width: fit-content;
+    font-size: 12px;
+    border: 1px solid rgb(105, 105, 105);
+    border-radius: 5px;
+    color: rgb(105, 105, 105);
+}
+.no-post-msg {
+    text-align: center;
+}
+.delete-confirm-msg {
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgb(219, 73, 73);
+    font-weight: bold;
+}
+.delete-success-msg {
+    text-align: center;
+}
+.err {
+    color: rgb(213, 66, 66);
+    font-size: 13px;
+}
+.p-pre {
+    white-space: pre-wrap;
+}
+
+nav.pagination {
+    text-align: center;
+    margin: 40px 0;
+}
+
+nav.pagination ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+nav.pagination ul li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+nav.pagination ul li a {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+nav.pagination ul li a:hover {
+    background-color: #ddd;
+}
+
+nav.pagination ul li a.current-page {
+    background-color: #333;
+    color: #fff;
+    pointer-events: none;
+    cursor: default;
+}
+
+.reply-form {
+    margin-left: 30px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+ul ul {
+    margin-left: 20px;
+}
+
+button[name="comment_btn"] {
+    border: 1px solid rgb(148, 148, 218);
+    background-color: rgb(96, 96, 233);
+    padding: 5px 15px;
+}
+
+button[name="comment_btn"]:hover {
+    border: 1px solid rgb(148, 148, 218);
+    background-color: rgb(39, 39, 168);
+    padding: 7px 18px;
+}
